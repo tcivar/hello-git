@@ -5,9 +5,87 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <!--    <script type="text/javascript" src="js/lightbox.js"></script>
+-->
+    <script src="js/jquery.min.js"></script>
+    <script>
+        // jQuery is required to run this code
+        $(document).ready(function() {
+            scaleVideoContainer();
+
+            initBannerVideoSize('.video-container .poster img');
+            initBannerVideoSize('.video-container .filter');
+            initBannerVideoSize('.video-container video');
+
+            $(window).on('resize', function() {
+                scaleVideoContainer();
+                scaleBannerVideoSize('.video-container .poster img');
+                scaleBannerVideoSize('.video-container .filter');
+                scaleBannerVideoSize('.video-container video');
+            });
+        });
+
+        function scaleVideoContainer() {
+            var height = $(window).height() + 5;
+            var unitHeight = parseInt(height) + 'px';
+            $('.homepage-hero-module').css('height', unitHeight);
+        }
+
+        function initBannerVideoSize(element) {
+            $(element).each(function() {
+                $(this).data('height', $(this).height());
+                $(this).data('width', $(this).width());
+            });
+
+            scaleBannerVideoSize(element);
+        }
+
+        function scaleBannerVideoSize(element) {
+
+            var windowWidth = $(window).width(),
+                windowHeight = $(window).height() + 5,
+                videoWidth,
+                videoHeight;
+
+            // console.log(windowHeight);
+
+            $(element).each(function() {
+                var videoAspectRatio = $(this).data('height') / $(this).data('width');
+
+                $(this).width(windowWidth);
+
+                if (windowWidth < 1000) {
+                    videoHeight = windowHeight;
+                    videoWidth = videoHeight / videoAspectRatio;
+                    $(this).css({
+                        'margin-top': 0,
+                        'margin-left': -(videoWidth - windowWidth) / 2 + 'px'
+                    });
+
+                    $(this).width(videoWidth).height(videoHeight);
+                }
+
+                $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+
+            });
+        }
+    </script>
+    <audio controls autoplay>
+        <source src="audio/Tez_Cadey-TheKnife.mp3">
+        <source src="audio/Alan_Walker-Alone.mp3">
+        <source src="audio/calvin_harris_i_need_your_love.mp3">
+
+    </audio>
 </head>
 
 <body>
+    <div class="trailer">
+        <video playsinline autoplay muted loop class="bgvid">
+            <source src="video/Workout.webm" type="video/webm">
+            <source src="video/Workout.mp4" type="video/mp4">
+            <source src="video/Workout.ogv" type="video/ogv">
+        </video>
+    </div>
     <header>
         <nav>
             <div class="head_block">
@@ -21,7 +99,12 @@
                     </ul>
                 </div>
                 <div class="h1head2">
-                    <article></article>
+                    <div class="homepage-hero-module">
+                        <div class="video-container">
+                            <div class="filter"></div>
+                            <video autoplay loop muted playsinline src="video/Workout.webm" class="fillWidth"></video>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -34,28 +117,43 @@
                 <p class="p2">Pariatur iure ab sunt nesciunt, quibusdam odio iste cumque itaque, ipsa vel exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi dolores. Sequi itaque, unde per&shy;ferendis nemo debitis dolor.</p>
             </article>
             <div class="block2">
-                <article></article>
+                <div class="homepage-hero-module">
+                    <div class="video-container">
+                        <div class="filter"></div>
+                        <video autoplay loop muted playsinline src="video/preview.mp4" class="fillWidth"></video>
+                    </div>
+                </div>
             </div>
         </section>
         <section>
             <div class="s3">
                 <h2>Dignity and pluses product</h2>
                 <ul>
-                    <li><div class="img1"><img src="img/plus_icon.png" alt="plus"></div>Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.</li>
-                    <li><div class="img1"><img src="img/plus_icon.png" alt="plus"></div>Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.</li>
-                    <li><div class="img1"><img src="img/plus_icon.png" alt="plus"></div>Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.</li>
+                    <li>
+                        <div class="img1"><img src="img/plus_icon.png" alt="plus"></div>Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.
+                    </li>
+                    <li>
+                        <div class="img1"><img src="img/plus_icon.png" alt="plus"></div>Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.
+                    </li>
+                    <li>
+                        <div class="img1"><img src="img/plus_icon.png" alt="plus"></div>Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.
+                    </li>
                 </ul>
                 <ul>
-                    <li><div class="img1"><img src="img/plus_icon.png" alt="plus"></div>Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.</li>
-                    <li><div class="img1"><img src="img/plus_icon.png" alt="plus"></div>Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.</li>
-                    <li><div class="img1"><img src="img/plus_icon.png" alt="plus"></div>Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.</li>
-                    </ul>
+                    <li>
+                        <div class="img1"><img src="img/plus_icon.png" alt="plus"></div>Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.
+                    </li>
+                    <li>
+                        <div class="img1"><img src="img/plus_icon.png" alt="plus"></div>Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.
+                    </li>
+                    <li>
+                        <div class="img1"><img src="img/plus_icon.png" alt="plus"></div>Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.
+                    </li>
+                </ul>
             </div>
         </section>
     </main>
     <footer>
 
     </footer>
-</body>
-
-</html>
+</body></html>
