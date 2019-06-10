@@ -1,0 +1,47 @@
+.svg {
+    width: 500px;
+    height: 500px;
+    background-image: url(../img/order.svg);
+    background-size: cover;
+}
+
+ul li {
+    list-style: none;
+    display: inline;
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: transparent;
+    text-shadow: 0 0 2px green;
+}
+
+ul li a:hover {
+    color: green;
+}
+
+.container {
+    display: flex;
+}
+
+.block {
+    background: yellow;
+    border: 1px solid black;
+}
+
+.block1 {
+    width: 100px;
+    height: 100px;
+}
+
+.block2 {
+    width: 200px;
+    height: 200px;
+}
+
+.block3 {
+    width: 300px;
+    height: 300px;
+}
