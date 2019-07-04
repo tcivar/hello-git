@@ -4,6 +4,36 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="css/test.css">
+    <script>
+        // Получаем ссылку на элемент canvas по идентификатору
+        var elem = document.getElementById('myCanvas');
+        // Проверка свойства и метода на доступность для обратной совместимости со старыми браузерами
+        if (elem && elem.getContext) {
+            // Получаем 2D-контекст
+            // Для каждого элемента можно инициализировать только один контекст
+            var context = elem.getContext('2d');
+            if (context) {
+                // Рисуем прямоугольник, задав координаты (x,y), а также его ширину и высоту
+                context.fillRect(0, 0, 150, 100);
+            }
+        }
+    </script>
+    <script>
+    var canvas = document.getElementById("myCanvas3");
+    var context = canvas.getContext("2d");
+     context.moveTo(188, 130);
+    var controlX1 = 0;
+    var controlY1 = 0;
+    var controlX2 = 480;
+    var controlY2 = 50;
+    var endX = 288;
+    var endY = 70;
+     context.bezierCurveTo(controlX1, controlY1, controlX2, 
+        controlY2, endX, endY);
+     context.lineWidth = 10;
+    context.strokeStyle = "black"; // line color
+    context.stroke();
+</script>
 </head>
 
 <body>
@@ -17,8 +47,15 @@
         <h3>My svg</h3>
     </div>
     <div class="container">
-        <div class="block1"></div>
-        <div class="block2"></div>
-        <div class="block3"></div>
+        <div class="block block1">1</div>
+        <div class="block block2">2</div>
+        <div class="block block3">3</div>
     </div>
+    <canvas id="myCanvas" width="300" height="150">
+        Альтернативное содержимое, которое будет показано, если браузер не поддерживает Canvas. В данном случае можно написать сообщение «Ваш браузер не поддерживает CANVAS»
+    </canvas>
+    <canvas id="myCanvas3" width="500" height="250">
+        <p>&nbsp;</p>
+        <p>Альтернативное содержимое, которое будет показано, если браузер не поддерживает Canvas. В данном случае можно написать сообщение «Ваш браузер не поддерживает Canvas».</p>
+    </canvas>
 </body></html>
