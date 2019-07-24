@@ -7,82 +7,36 @@
 <body>
 	<h1>Home Work2</h1>
 	<script>
+        "use strict";
 		function task_1() {
-			var a = 1, b = 1, c, d;
-			c = ++a; console.log('c = ', c);           // 2, a = 2, c = a = 2 
-			d = b++; console.log('d = ', d);           // 1, d = b = 1 , b =2 
-			c = (2+ ++a); console.log('c = ', c);      // 5, a = 3, c = 2 + a = 5 
-			d = (2+ b++); console.log('d = ', d);      // 4, d = 2 + 2 = 4, b = 3
+			let a = 1, b = 1, c, d;
+			c = ++a; 
+            console.log('c = ', c);           // 2, a = 2, c = a = 2 
+			d = b++; 
+            console.log('d = ', d);           // 1, d = b = 1 , b =2 
+			c = (2+ ++a); 
+            console.log('c = ', c);      // 5, a = 3, c = 2 + a = 5 
+			d = (2+ b++); 
+            console.log('d = ', d);      // 4, d = 2 + 2 = 4, b = 3
 			console.log('a = ', a);                    // 3, a = 3
 			console.log('b = ', b);                    // 3, b = 3
 		}
 		function task_2() {
-			var a = 2;
-			var x = 1 + ( a *= 2);		// x = 1 + (a * 2)
+			let a = 2;
+			let x = 1 + ( a *= 2);		// x = 1 + (a * 2)
 			console.log('x =', x);
 		}
 		function task_3(a,b) {
-			if (a > 0 && b > 0)
+			if (a > 0 && b > 0) {
 				console.log(a - b);
-			else if (a < 0 && b < 0)
+            }
+			else if (a < 0 && b < 0) {
 				console.log(a * b);
-			else if ( (a < 0 && b > 0) || (a > 0 && b < 0) )
+            }
+			else if ( (a < 0 && b > 0) || (a > 0 && b < 0) ) {
 				console.log(a + b);
+            }
 		}
-		function task_4(a) {
-			if ( a <= 15 && a > 0)
-				switch(a) {
-					case 1:		
-						console.log('a =', a);
-						break;
-					case 2:		
-						console.log('a =', a);
-						reak;
-					case 3:		
-						console.log('a =', a);
-						break;
-					case 4:		
-						console.log('a =', a);
-						break;
-					case 5:		
-						console.log('a =', a);
-						break;
-					case 6:		
-						console.log('a =', a);
-						break;
-					case 7:		
-						console.log('a =', a);
-						break;
-					case 8:		
-						console.log('a =', a);
-						break;
-					case 9:		
-						console.log('a =', a);
-						break;
-					case 10:		
-						console.log('a =', a);
-						break;
-					case 11:		
-						console.log('a =', a);
-						break;
-					case 12:		
-						console.log('a =', a);
-						break;
-					case 13:		
-						console.log('a =', a);
-						break;
-					case 14:		
-						console.log('a =', a);
-						break;
-					case 15:		
-						console.log('a =', a);
-						break;
-				}	
-			else if ( a <= 0)
-				console.log('Out of rang 15 a =', a);
-			else
-				console.log('Out of rang 15 a =', a);
-		}		
 		function sum(a,b) {
 			return (a + b);			
 		}
@@ -96,18 +50,31 @@
 			return (a / b);				
 		}		
 		function mathOperation(arg1, arg2, operation) {
-			return task_4(operation(arg1,arg2));			
+			switch (operation) {
+                case "+":
+                    return sum(arg1,arg2);
+                case "-":
+                    return minus(arg1,arg2);
+                case "/":
+                    return div(arg1,arg2);
+                case "*":
+                    return multiply(arg1,arg2);
+                default:
+                    throw new Error("Operration" + operation + "not defined");
+            }			
 		}
-		console.log('Task 1')
-		task_1()
-		console.log('Task 2')
-		task_2()
-		console.log('Task 3')
-		task_3(5,-10)
-		console.log('Task 4')
-		task_4(-4)
-		console.log('Task 6')
-		mathOperation(1, 5, minus)
+		console.log('Task 1');
+		task_1();
+		console.log('Task 2');
+		task_2();
+		console.log('Task 3');
+		task_3(5,-10);
+		console.log('Task 5');
+		mathOperation(1, 5, "+");
+        mathOperation(15, 5, "-");
+        mathOperation(10, 5, "/");
+        mathOperation(2, 5, "*");
+    
 	</script>
 </body>
 </html>
