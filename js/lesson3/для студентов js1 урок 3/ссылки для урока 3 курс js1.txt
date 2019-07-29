@@ -1,0 +1,21 @@
+﻿Циклы и итерации
+	https://mzl.la/2OSeEqr
+	
+Массивы
+	https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array
+	
+Методы массивов (слева в навигации)
+	https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array#
+	
+Статья "О выборе структур данных для начинающих" (C, C++, Java, C#)
+	https://habr.com/post/339656/
+	
+Статья "Зачем они нужны в JavaScript? Symbol, Iterator, Generator"	
+	https://bit.ly/2Q8Po3U
+	
+Правила оформления кода
+	https://ymatuhin.ru/front-end/javascript_styleguide/
+
+Визуализация алгоритмов сортировки
+	https://youtu.be/Gnp8G1_kO3I
+	https://youtu.be/y9Ecb43qw98

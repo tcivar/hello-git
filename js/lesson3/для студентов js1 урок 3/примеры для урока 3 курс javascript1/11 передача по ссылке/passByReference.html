@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        let cars = ['mercedes', 'toyota', 'bmw'];
+        let autos = cars;
+        autos[0] = 'honda';
+        /* обе переменные содержат в себе ссылку на одну
+        и ту же область в памяти */
+        console.log(autos); //["honda", "toyota", "bmw"]
+        console.log(cars); //["honda", "toyota", "bmw"]
+
+
+        let story = ["жили", "у", "бабуси", "два", "веселых", "гуся"];
+
+        //массив передается по ссылке
+        function changeQuantity(arr) {
+            arr[3] = "три";
+        }
+        changeQuantity(story);
+
+        console.log(story); //["жили", "у", "бабуси", "три", "веселых", "гуся"]
+    </script>
+</body>
+</html>
