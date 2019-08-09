@@ -1,0 +1,8 @@
+﻿Объекты в javascript
+	https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Working_with_Objects
+
+Оператор in
+	https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/in
+
+Классы поддерживаются всеми современными браузерами, кроме IE
+        https://kangax.github.io/compat-table/es6/#test-class

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        const myCar = {
+            manufacturer: 'BMW',
+            color: 'black',
+            possibleColors: ['black', 'red', 'brown', 'grey'],
+            engine: {
+                engineCode: 'B58',
+                power: 350,
+            },
+            beep: function () {
+                console.log('Машина подает сигнал!');
+            }
+        };
+
+        console.log(myCar.possibleColors);
+        for (let i = 0; i < myCar.possibleColors.length; i++) {
+            console.log(`Возможный цвет машины: ${myCar.possibleColors[i]}`);
+        }
+
+        console.log(myCar.engine.power);  
+
+        myCar.beep();
+    </script>
+</body>
+
+</html>
