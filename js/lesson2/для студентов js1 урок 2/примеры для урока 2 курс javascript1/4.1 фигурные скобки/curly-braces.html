@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //группировка нескольких строк кода внутри
+        //фигурных скобок
+        const number = +prompt("введите число");
+        if (number > 0) {
+            console.log('число больше нуля');
+            alert('привет мир');
+        } else {
+            console.log('число меньше либо равно нулю');
+            alert('hello world');
+        }
+
+        //здесь внутри фигурных скобок находится тело функции
+        function sayHello(num1, num2) {
+            const sum = num1 + num2;
+            const mul = num1 * num2;
+            alert('Сумма равна ' + sum + ', произведение равно ' + mul);
+        }
+        sayHello(4, 9);
+
+        //объявляем литерал объекта
+        const post = {
+            title: 'Название новости',
+            text: 'Здесь текст новости',
+            date: '10.04.2019',
+            published: true,
+        };
+
+        //фигурные скобки также позволяют указать количество повторений
+        //в регулярном выражении
+        const regex = /(https?)(:\/\/)([a-z]+)(.)([a-z]{2,})/gm;
+        const str = `adfasd https://google.ru adsf asfd `;
+        const match = regex.test(str);
+        console.log(match); //true
+        //Т.к. в строке str действительно содержится часть
+        //текста подходящая под описание url-адреса сайта
+    </script>
+</body>
+
+</html>

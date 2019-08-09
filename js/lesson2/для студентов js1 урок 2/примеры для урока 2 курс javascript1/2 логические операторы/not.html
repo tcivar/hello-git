@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Логическое "НЕ"</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        
+        let phoneNumber = prompt("введите ваш номер телефона");
+		let email = prompt("введите ваш email");
+		if (!Boolean(phoneNumber) && !Boolean(email)) {
+    		alert("нужно ввести либо номер телефона, либо почту!");
+		}
+    </script>
+</body>
+</html>

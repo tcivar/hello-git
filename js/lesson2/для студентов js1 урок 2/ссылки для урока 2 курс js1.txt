@@ -1,0 +1,39 @@
+﻿Как сделать программу генерации паролей
+	https://youtu.be/q3zIIpyCMmE
+
+Операторы
+	https://mzl.la/2OIRxyL
+	
+Тернарный оператор
+	https://mzl.la/2qLfqvZ
+	
+Ветвление
+	https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/if...else
+	
+Switch
+	https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/switch
+	
+Функции
+	https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Functions
+	
+Подробнее про рекурсию
+	https://habr.com/post/275813/
+
+Видео про рекурсию
+	https://www.youtube.com/watch?v=rh1mP02NFoM
+	
+let
+	https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/let
+	
+var
+	https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/var
+	
+JSDOC
+	https://jsdoc.app/
+
+Видео про jsdoc
+	https://youtu.be/pM9YHZ5Og5E
+	
+Расширение Document This (jsdoc для visual studio code), это расширение работает только внутри js файлов.
+Для генерации документации два раза нажмите ctrl + alt + d.
+	https://marketplace.visualstudio.com/items?itemName=joelday.docthis
