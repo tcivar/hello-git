@@ -7,16 +7,18 @@
 <body>
     <script>
         "use strict";
-        
-        for (let i = 0; i <= 10; i++) {
-            if (i == 0) {
-                console.log("это ноль");
-            } else if (i % 2 == 0) {
-                console.log(i + " - это четное число");
-            } else {
-                console.log(i + " - это НЕ четное число");
+        let arr = [];
+        nextPrime:
+            for (let i = 2; i <= 30; i++) {  
+                for (let j = 2; j < i; j++) {
+                    if (i % j == 0) {
+                        continue nextPrime;
+                    }
+                }
+                let newArr = arr.push(i);
+                console.log(i);
             }
-        }
+        console.log(arr);
     </script>
 </body>
 </html>
