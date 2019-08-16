@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/feedback">
+        <input type="text">
+        <input type="text">
+        <button>Send</button>
+    </form>
+
+    <script>
+        "use strict";
+
+        let firstInput = document.querySelectorAll('form[action="/feedback"] input');
+
+        //NodeList
+        console.log(firstInput);
+    </script>
+</body>
+</html>

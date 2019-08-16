@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- beforebegin -->
+    <button>
+        <!-- afterbegin -->
+        Кнопка
+        <!-- beforeend -->
+    </button>
+    <!-- afterend -->
+
+    <script>
+        "use strict";
+        
+        let button = document.querySelector('button');
+        /* разбирает указанный текст как HTML или XML и вставляет 
+        полученные узлы (nodes) в DOM дерево в указанную позицию. */
+        button.insertAdjacentHTML("beforebegin", "<u>hello</u>");
+
+        //https://developer.mozilla.org/ru/docs/Web/API/Element/insertAdjacentHTML
+    </script>
+</body>
+</html>
